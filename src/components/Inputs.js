@@ -80,7 +80,7 @@ function Inputs({ setQuery, units, setUnits }) {
         <button
           name="metric"
           autofocus="true"
-          className={`text-xl font-light transition ease-out hover:scale-125 ${metricColorHandler()}`}
+          className={`text-xl font-light transition ease-out hover:scale-125 focus:outline-none ${metricColorHandler()}`}
           onClick={setMetricHandler}
         >
           °C
