@@ -19,7 +19,9 @@ function Forecast({ title, items }) {
               alt=""
               className="w-12 my-1"
             />
-            <p className="font-medium ">{`${item.temp.toFixed()}`}°</p>
+            
+            <span className="font-medium ">{`${item.temp.toFixed()}`}°</span>
+            
           </div>
         ))}
 

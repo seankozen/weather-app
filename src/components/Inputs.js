@@ -79,7 +79,7 @@ function Inputs({ setQuery, units, setUnits }) {
       <div className="flex flex-row w-1/4 items-center justify-center">
         <button
           name="metric"
-          autofocus="true"
+          autoFocus={true}
           className={`text-xl font-light transition ease-out hover:scale-125 focus:outline-none ${metricColorHandler()}`}
           onClick={setMetricHandler}
         >
