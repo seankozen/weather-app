@@ -16,6 +16,7 @@ function App() {
     const fetchWeather = async () => {
       await getFormattedWeatherData({ ...query, units }).then((data) => {
         setWeather(data);
+        console.log(data);
       });
     };
     fetchWeather();
@@ -25,7 +26,7 @@ function App() {
     if (!weather) {
       return "from-cyan-700 to-blue-700";
     }
-    const threshold = units === "metric" ? 20 : 60;
+    const threshold = units === "metric" ? 20 : 68;
     if (weather.temp <= threshold) {
       return "from-cyan-700 to-blue-700";
     }
@@ -47,7 +48,7 @@ function App() {
             <TemperatureAndDetails weather={weather} units={units} />
           
           <Forecast title="hourly forecast" items={weather.hourly} />
-          <Forecast title="daily forecast" items={weather.daily} />
+          <Forecast title="7-day forecast" items={weather.daily} />
         </Fragment>
       )}
     </div>
